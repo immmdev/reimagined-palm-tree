@@ -1,76 +1,27 @@
-#include <bits/stdc++.h>
-using namespace std;
+// #include <bits/stdc++.h>
+// using namespace std;
 
-int main()
-{
-    long long t;
-    cin >> t;
-    while (t--)
-    {
-        long long n, k;
-        cin >> n >> k;
+// int main() {
+//     ios_base::sync_with_stdio(false);
+//     cin.tie(nullptr);
 
-        string s;
-        cin >> s;
+//     int T;
+//     cin >> T;
+//     while (T--) {
+//         int N;
+//         cin >> N;
+//         int M = N * (N - 1) / 2;
+//         vector<int> wt(M);
+//         for (int i = 0; i < M; i++) cin >> wt[i];
 
-        map<long long, long long> hash;
-        for (long long i = 0; i < n; i++)
-        {
-            hash[s[i]]++;
-        }
+//         sort(wt.begin(), wt.end()); 
 
-        long long size_new = n - k;
-        long long count_1 = 0;
-        long long count_odd = 0;
+//         long long mmst = 0;
+//         for (int i = 0; i < N - 1; i++)
+//             mmst += wt[i];
 
-        if (hash.size() == 1)
+//         cout << mmst << "\n";
+//     }
 
-            if (size_new % 2 == 0)
-            {
-                for (auto &it : hash)
-                {
-                    if (it.second % 2 != 0)
-                    {
-                        count_1++;
-                    }
-
-                    else
-                    {
-                        continue;
-                    }
-                }
-
-                if (count_1 == k)
-                {
-                    cout << "Yes" << endl;
-                }
-                else
-                {
-                    cout << "No" << endl;
-                }
-            }
-            else
-            {
-                for (auto &it : hash)
-                {
-                    if (it.second % 2 != 0)
-                    {
-                        count_odd++;
-                    }
-
-                    else
-                    {
-                        continue;
-                    }
-                }
-                if (count_odd - k == 1)
-                {
-                    cout << "Yes" << endl;
-                }
-                else
-                {
-                    cout << "No" << endl;
-                }
-            }
-    }
-}
+//     return 0;
+// }
