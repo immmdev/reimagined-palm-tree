@@ -59,5 +59,8 @@
   "files.associations": {
     "*.ejs": "html",
     "iostream": "cpp"
+  },
+  "github.copilot.enable": {
+    "*": false
   }
 }

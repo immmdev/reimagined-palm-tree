@@ -68,4 +68,4 @@ int main(){
 }
 
 // TC O(log2n);
-//SC  O(1)
+// SC  O(1)
